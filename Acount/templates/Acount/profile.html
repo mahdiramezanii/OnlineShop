@@ -138,7 +138,7 @@
                                             <tr>
                                                 <td>
                                                     <div class="title">شماره تلفن همراه:</div>
-                                                    <div class="value">*******0991</div>
+                                                    <div class="value">{{ request.user.phone_number }}</div>
                                                 </td>
                                                 <td>
                                                     <div class="title">تاریخ عضویت:</div>
@@ -152,7 +152,7 @@
                                                 </td>
                                                 <td>
                                                     <div class="title"> کد ملی :</div>
-                                                    <div class="value">-</div>
+                                                    <div class="value">{{ request.user.nation_code }}</div>
                                                 </td>
                                             </tr>
                                         </tbody>
