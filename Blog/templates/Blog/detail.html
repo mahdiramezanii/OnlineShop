@@ -1,0 +1,367 @@
+{% load jalali_tags %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+{% include "include/head.html" %}
+
+<body>
+    <!-- header-------------------------------->
+    {% include "include/header.html" %}
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">جستجو</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="header-search text-right">
+                        <div class="header-search-box">
+                            <form action="#" class="form-search">
+                                <input type="search" class="header-search-input" name="search-input"
+                                    placeholder="نام کالا، برند و یا دسته مورد نظر خود را جستجو کنید…">
+                                <div class="action-btns">
+                                    <button class="btn btn-search" type="submit">
+                                        <img src="assets/images/search.png" alt="search">
+                                    </button>
+                                    <div class="search-filter">
+                                        <div class="form-ui">
+                                            <div class="custom-select-ui">
+                                                <select class="right">
+                                                    <option>همه دسته ها</option>
+                                                    <option>کالای دیجیتال</option>
+                                                    <option>آرایشی بهداشتی</option>
+                                                    <option>ابزاری اداری</option>
+                                                    <option>مد پوشاک</option>
+                                                    <option>خانه آشپز خانه</option>
+                                                    <option>لوازم تحریر و هنر</option>
+                                                    <option>کودک و نوزاد</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                            <div class="search-result">
+                                <ul class="search-result-list mb-0">
+                                    <li>
+                                        <a href="#"><i class="mdi mdi-clock-outline"></i>
+                                            کالای دیجیتال
+                                            <button class="btn btn-light btn-continue-search" type="submit">
+                                                <i class="fa fa-angle-left"></i>
+                                            </button>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="mdi mdi-clock-outline"></i>
+                                            آرایشی و بهداشتی
+                                            <button class="btn btn-light btn-continue-search" type="submit">
+                                                <i class="fa fa-angle-left"></i>
+                                            </button>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="mdi mdi-clock-outline"></i>
+                                            گوشی موبایل
+                                            <button class="btn btn-light btn-continue-search" type="submit">
+                                                <i class="fa fa-angle-left"></i>
+                                            </button>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="mdi mdi-clock-outline"></i>
+                                            تبلت
+                                            <button class="btn btn-light btn-continue-search" type="submit">
+                                                <i class="fa fa-angle-left"></i>
+                                            </button>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="mdi mdi-clock-outline"></i>
+                                            لپ تاپ
+                                            <button class="btn btn-light btn-continue-search" type="submit">
+                                                <i class="fa fa-angle-left"></i>
+                                            </button>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="mdi mdi-clock-outline"></i>
+                                            دوربین
+                                            <button class="btn btn-light btn-continue-search" type="submit">
+                                                <i class="fa fa-angle-left"></i>
+                                            </button>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <div class="localSearchSimple"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="nav-categories-overlay"></div>
+    <div class="overlay-search-box"></div>
+    <!-- header-------------------------------->
+
+    <!-- single-blog--------------------------->
+    <main class="main-row mb-2 mt-2 d-block">
+        <div class="container-main">
+            <div class="d-block">
+                <div class="col-lg-9 col-md-8 col-xs-12 pr mt-3">
+                    <section class="blog-home">
+                        <article class="post-item">
+                            <header class="entry-header mb-3">
+                                <div class="post-meta date">
+                                    <i class="mdi mdi-calendar-month"></i>1399/02/14
+                                </div>
+                                <div class="post-meta author">
+                                    <i class="mdi mdi-account-circle-outline"></i>
+                                    ارسال شده توسط <a href="#"> مدیریت </a>
+                                </div>
+                                <div class="post-meta category">
+                                    <i class="mdi mdi-folder"></i>
+                                    <a href="#">دسته‌بندی نشده</a> ، <a href="#">بازی آنلاین</a> ، <a href="#">معرفی
+                                        بازی</a>
+                                </div>
+                                <div class="post-meta Visit">
+                                    <i class="mdi mdi-eye"></i>
+                                    996 بازدید
+                                </div>
+                            </header>
+                            <div class="post-thumbnail">
+                                <img src="{{ object.image.url }}"
+                                    alt="{{ object.titel }}">
+                            </div>
+                            <div class="title">
+                                <a href="#">
+                                    <h1 class="title-tag">{{ object.titel }}</h1>
+                                </a>
+                            </div>
+                            <div class="content-blog">
+                                <p>{{ object.body }}
+                                </p>
+
+                            </div>
+                        </article>
+
+
+                        <div class="post-comments">
+                            <div class="comments-area">
+                                <h2 class="comments-title">
+                                    <i class="fa fa-comment-o"></i>
+                                    نظرات کاربران
+                                    <p class="count-comment">253 نظر</p>
+                                </h2>
+                                <ol class="comment-list">
+                                    {% for comment in object.comment.all %}
+                                    <li class="comment-even">
+                                        <div class="comment-body">
+                                            <header class="comment-meta">
+                                                <div class="comment-author">
+                                                    <img src="{% static "assets/images/man.png" %}" class="avator">
+                                                    توسط {{ comment.user.username }} در تاریخ {{ comment.created|to_jalali:'%y/%m/%d _ %H:%M:%S'}}
+                                                </div>
+                                            </header>
+                                            <p>{{ comment.body }}</p>
+                                            <div class="reply text-left">
+                                                <a href="#" class="comment-reply-link">پاسخ دادن</a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    {% endfor %}
+                                </ol>
+
+                                <div class="form-comment">
+                                    <div class="col-md-12 col-sm-12">
+                                        <div class="form-ui">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <br>
+                                                    <br>
+                                                    <div class="form-row-title mb-2"> نام شما (اجباری)</div>
+                                                    <div class="form-row">
+                                                        <input class="input-ui pr-2" type="text"
+                                                            placeholder=" نام خود را بنویسید">
+                                                    </div>
+                                                    <br>
+                                                    <div class="form-row-title mb-2">عنوان نظر شما (اجباری)</div>
+                                                    <div class="form-row">
+                                                        <input class="input-ui pr-2" type="text"
+                                                            placeholder="عنوان نظر خود را بنویسید">
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 mt-5">
+                                                    <div class="form-row-title mb-2">متن نظر شما (اجباری)</div>
+                                                    <div class="form-row">
+                                                        <textarea class="input-ui pr-2 pt-2" rows="5"
+                                                            placeholder="متن خود را بنویسید"
+                                                            style="height:120px;"></textarea>
+                                                    </div>
+                                                </div>
+                                                <br>
+                                                <br>
+                                                <br>
+                                                <div class="col-12 mt-5 px-0">
+                                                    <button class="btn comment-submit-button">
+                                                        ثبت نظر
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <div class="col-lg-3 col-md-4 col-xs-12 pr mt-3 sticky-sidebar">
+                    <div class="shortcode-widget-area-sidebar">
+                        <section class="widget-posts">
+                            <div class="header-sidebar mb-3">
+                                <h3>جدیدترین نوشته ها</h3>
+                            </div>
+                            <div class="content-sidebar">
+                                <div class="item">
+                                    <div class="item-inner">
+                                        <div class="item-thumb">
+                                            <a href="#" class="img-holder d-block">
+                                                <img src="assets/images/blog/fortnite-battle-royale-iphone.jpg"
+                                                    alt="تعداد بازی‌کننده‌های فورتنایت، به خاطر آپدیت اخیر کاهش پیدا کرد">
+                                            </a>
+                                        </div>
+                                        <div class="title">
+                                            <a href="#">
+                                                <h2 class="title-tag">تعداد بازی‌کننده‌های فورتنایت، به خاطر آپدیت اخیر
+                                                    کاهش پیدا کرد</h2>
+                                            </a>
+                                            <span class="post-date">
+                                                14 اردیبهشت 1399
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="item-inner">
+                                        <div class="item-thumb">
+                                            <a href="#" class="img-holder d-block">
+                                                <img src="assets/images/blog/2017 Home Selling Results.jpg"
+                                                    alt="رسیدن به بهترین نتیجه در کمترین زمان ممکن!"> </a>
+                                        </div>
+                                        <div class="title">
+                                            <a href="#">
+                                                <h2 class="title-tag">رسیدن به بهترین نتیجه در کمترین زمان ممکن!</h2>
+                                            </a>
+                                            <span class="post-date">
+                                                14 اردیبهشت 1399
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="item-inner">
+                                        <div class="item-thumb">
+                                            <a href="#" class="img-holder d-block">
+                                                <img src="assets/images/blog/iphone-7-plus-water-damage-repair-.jpg"
+                                                    alt="آیفون ۲۰۱۹ از آنتن بهتری بهره خواهد برد"> </a>
+                                        </div>
+                                        <div class="title">
+                                            <a href="#">
+                                                <h2 class="title-tag">آیفون ۲۰۱۹ از آنتن بهتری بهره خواهد برد</h2>
+                                            </a>
+                                            <span class="post-date">
+                                                14 اردیبهشت 1399
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="item-inner">
+                                        <div class="item-thumb">
+                                            <a href="#" class="img-holder d-block">
+                                                <img src="assets/images/blog/women-calligrapher-in-cozy-home-working.jpg"
+                                                    alt="۴ فایده مهم نگهداری از گیاهان در منزل"> </a>
+                                        </div>
+                                        <div class="title">
+                                            <a href="#">
+                                                <h2 class="title-tag">۴ فایده مهم نگهداری از گیاهان در منزل</h2>
+                                            </a>
+                                            <span class="post-date">
+                                                14 اردیبهشت 1399
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="item-inner">
+                                        <div class="item-thumb">
+                                            <a href="#" class="img-holder d-block">
+                                                <img src="assets/images/blog/inRqLEr.jpg"
+                                                    alt="منتقدان می‌گویند «نمای دور» جان تازه‌ای به کمدی رمانتیک بخشیده">
+                                            </a>
+                                        </div>
+                                        <div class="title">
+                                            <a href="#">
+                                                <h2 class="title-tag">منتقدان می‌گویند «نمای دور» جان تازه‌ای به کمدی
+                                                    رمانتیک بخشیده</h2>
+                                            </a>
+                                            <span class="post-date">
+                                                14 اردیبهشت 1399
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- single-blog--------------------------->
+
+    <!-- footer-------------------------------->
+    {% include "include/footer.html" %}
+    <!-- footer------------------------------------------->
+    <!-- scroll_Progress------------------------->
+    <div class="progress-wrap">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+        </svg>
+    </div>
+    <!-- scroll_Progress------------------------->
+    <!-- Page Loader----------------------------->
+    <div class="P-loader">
+        <div class="P-loader-content">
+            <div class="logo-loader">
+                <img src="{% static "assets/images/logo.png" %}" alt="logo">
+            </div>
+            <div class="pic-loader text-center">
+                <img src="{% static "assets/js/main.js" %}" width="50" alt="">
+            </div>
+        </div>
+    </div>
+    <!-- Page Loader----------------------------->
+
+</body>
+<!-- file js---------------------------------------------------->
+<script src="{% static "assets/js/vendor/jquery-3.2.1.min.js" %}"></script>
+<script src="{% static "assets/js/vendor/bootstrap.js" %}"></script>
+<!-- plugin----------------------------------------------------->
+<script src="{% static "assets/js/vendor/owl.carousel.min.js" %}"></script>
+<script src="{% static "assets/js/vendor/jquery.countdown.js" %}"></script>
+<script src="{% static "assets/js/vendor/ResizeSensor.min.js" %}"></script>
+<script src="{% static "assets/js/vendor/theia-sticky-sidebar.min.js" %}"></script>
+<script src="{% static "assets/js/vendor/wNumb.js" %}"></script>
+<script src="{% static "assets/js/vendor/nouislider.min.js" %}"></script>
+<script src="{% static "assets/js/vendor/jquery.nice-select.min.js" %}"></script>
+<!-- main js---------------------------------------------------->
+<script src="{% static "assets/js/main.js" %}"></script>
+
+</html>
