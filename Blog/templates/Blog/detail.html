@@ -171,13 +171,15 @@
                                             </header>
                                             <p>{{ comment.body }}</p>
                                             <div class="reply text-left">
-                                                <a href="#" class="comment-reply-link">پاسخ دادن</a>
+                                                <button onclick="set_id('{{ comment.id }}')" class="comment-reply-link btn-primary">پاسخ دادن
+                                                </button>
                                             </div>
                                         </div>
                                     </li>
                                     {% endfor %}
                                 </ol>
-
+                                <form method="post">
+                                    {% csrf_token %}
                                 <div class="form-comment">
                                     <div class="col-md-12 col-sm-12">
                                         <div class="form-ui">
@@ -187,20 +189,24 @@
                                                     <br>
                                                     <div class="form-row-title mb-2"> نام شما (اجباری)</div>
                                                     <div class="form-row">
-                                                        <input class="input-ui pr-2" type="text"
+                                                        <input class="input-ui pr-2" type="text" id="name" value="{{ reauest.user.first_name }}" name="name"
                                                             placeholder=" نام خود را بنویسید">
+                                                    </div>
+                                                    <div class="form-row-title mb-2"> نام شما (اجباری)</div>
+                                                    <div class="form-row">
+                                                        <input type="hidden" name="parent_id" id="parent_id" value="">
                                                     </div>
                                                     <br>
                                                     <div class="form-row-title mb-2">عنوان نظر شما (اجباری)</div>
                                                     <div class="form-row">
-                                                        <input class="input-ui pr-2" type="text"
+                                                        <input class="input-ui pr-2" type="text" name="titel"
                                                             placeholder="عنوان نظر خود را بنویسید">
                                                     </div>
                                                 </div>
                                                 <div class="col-12 mt-5">
                                                     <div class="form-row-title mb-2">متن نظر شما (اجباری)</div>
                                                     <div class="form-row">
-                                                        <textarea class="input-ui pr-2 pt-2" rows="5"
+                                                        <textarea class="input-ui pr-2 pt-2" rows="5" name="text"
                                                             placeholder="متن خود را بنویسید"
                                                             style="height:120px;"></textarea>
                                                     </div>
@@ -209,7 +215,7 @@
                                                 <br>
                                                 <br>
                                                 <div class="col-12 mt-5 px-0">
-                                                    <button class="btn comment-submit-button">
+                                                    <button class="btn comment-submit-button" type="submit">
                                                         ثبت نظر
                                                     </button>
                                                 </div>
@@ -217,6 +223,7 @@
                                         </div>
                                     </div>
                                 </div>
+                                    </form>
                             </div>
                         </div>
                     </section>
@@ -363,5 +370,12 @@
 <script src="{% static "assets/js/vendor/jquery.nice-select.min.js" %}"></script>
 <!-- main js---------------------------------------------------->
 <script src="{% static "assets/js/main.js" %}"></script>
+
+<script>
+    function set_id(id){
+        document.getElementById("parent_id").value=id;
+        window.location.href="#name"
+    }
+</script>
 
 </html>

@@ -41,6 +41,7 @@ class Comment(models.Model):
     user=models.ForeignKey(User,on_delete=models.CASCADE,related_name="comment")
     article=models.ForeignKey(Article,on_delete=models.CASCADE,related_name="comment")
     created=models.DateField(auto_now_add=True)
+    titel=models.CharField(max_length=50)
     body=models.TextField()
     parent=models.ForeignKey("self",on_delete=models.CASCADE,null=True,blank=True,related_name="replay")
 
