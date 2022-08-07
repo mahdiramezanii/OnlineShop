@@ -1,0 +1,78 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>خوش آمدید</title>
+    <!-- font---------------------------------------->
+    <link rel="stylesheet" href="{% static "assets/css/vendor/font-awesome.min.css" %}]">
+    <link rel="stylesheet" href="{% static "assets/css/vendor/materialdesignicons.css" %}"">
+    <!-- plugin-------------------------------------->
+    <link rel="stylesheet" href="{% static "assets/css/vendor/bootstrap.css" %}">
+    <link rel="stylesheet" href="{% static "assets/css/vendor/owl.carousel.min.css" %}">
+    <link rel="stylesheet" href="{% static "assets/css/vendor/noUISlider.min.css" %}">
+    <!-- main-style---------------------------------->
+    <link rel="stylesheet" href="{% static "assets/css/main.css" %}">
+</head>
+<body>
+
+<!-- login----------------------------------->
+<div class="container">
+    <div class="row">
+        <div class="col-lg">
+            <section class="page-account-box">
+                <div class="col-lg-6 col-md-6 col-xs-12 mx-auto">
+                    <div class="ds-userlogin">
+                        <a href="#" class="account-box-logo">digismart</a>
+                        <div class="account-box">
+                            <div class="Login-to-account mt-4">
+                                <div class="account-box-content">
+                                    <h4 class="mb-2">به دیجی اسمارت خوش آمدید</h4>
+                                    <form action="#" class="form-account text-center">
+                                        <div class="user-account-welcome">
+                                            <img src="{% static "assets/images/man.png" %}">
+                                        </div>
+                                        <div class="made-account">
+                                            <h2>حساب کاربری شما در دیجی اسمارت ساخته شد</h2>
+                                            <p>اکنون می‌توانید به صفحه‌ای که در آن بودید بازگردید و یا با تکمیل اطلاعات حساب کاربری
+                                            خود به کلیه امکانات و
+                                            سرویس‌های دیجی اسمارت و سرویس‌های وابسته به آن دسترسی داشته باشید</p>
+                                        </div>
+                                        <div class="form-row-account">
+                                            <a href="{% url "Acount:profile_info" %}" class="btn btn-primary btn-login" >تکمیل حساب کاربری</a>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+<!-- login----------------------------------->
+                   
+<!-- scroll_Progress------------------------->
+<div class="progress-wrap">
+    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
+    </svg>
+</div>
+<!-- scroll_Progress------------------------->
+
+</body>
+<!-- file js---------------------------------------------------->
+<script src="{% static "assets/js/vendor/jquery-3.2.1.min.js" %}"></script>
+<script src="{% static "assets/js/vendor/bootstrap.js" %}"></script>
+<!-- plugin----------------------------------------------------->
+<script src="{% static "assets/js/vendor/owl.carousel.min.js" %}"></script>
+<script src="{% static "assets/js/vendor/jquery.countdown.js" %}"></script>
+<script src="{% static "assets/js/vendor/ResizeSensor.min.js" %}"></script>
+<script src="{% static "assets/js/vendor/theia-sticky-sidebar.min.js" %}"></script>
+<script src="{% static "assets/js/vendor/wNumb.js" %}"></script>
+<script src="{% static "assets/js/vendor/nouislider.min.js" %}"></script>
+<!-- main js---------------------------------------------------->
+<script src="{% static "assets/js/main.js" %}"></script>
+</html>

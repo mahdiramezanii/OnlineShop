@@ -1,0 +1,29 @@
+.zoom-box{
+    position: relative;
+}
+.zoom-box img{
+    vertical-align: bottom;
+}
+.zoom-box .zoom-selector{
+    position: absolute;
+    background-image: url("images/selector.png");
+    background-repeat: repeat;
+    display: none;
+    cursor: crosshair;
+}
+.zoom-box .viewer-box{
+    position: absolute;
+    border: 1px solid rgb(239,237,240);
+    display: none;
+    overflow: hidden;
+    right: 0;
+    left: auto !important;
+    width: 100% !important;
+    height: 100% !important;
+}
+.zoom-box .viewer-box>img{
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 99999999;
+}

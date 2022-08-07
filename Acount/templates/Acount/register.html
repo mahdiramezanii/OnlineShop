@@ -1,0 +1,110 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ثبت نام</title>
+    <!-- font---------------------------------------->
+    <link rel="stylesheet" href="{% static "assets/css/vendor/font-awesome.min.css" %}]">
+    <link rel="stylesheet" href="{% static "assets/css/vendor/materialdesignicons.css" %}"">
+    <!-- plugin-------------------------------------->
+    <link rel="stylesheet" href="{% static "assets/css/vendor/bootstrap.css" %}">
+    <link rel="stylesheet" href="{% static "assets/css/vendor/owl.carousel.min.css" %}">
+    <link rel="stylesheet" href="{% static "assets/css/vendor/noUISlider.min.css" %}">
+    <!-- main-style---------------------------------->
+    <link rel="stylesheet" href="{% static "assets/css/main.css" %}">
+</head>
+<body>
+
+<!-- login----------------------------------->
+<div class="container">
+    <div class="row">
+        <div class="col-lg">
+            <section class="page-account-box">
+                <div class="col-lg-6 col-md-6 col-xs-12 mx-auto">
+                    <div class="ds-userlogin">
+                        <a href="#" class="account-box-logo">digismart</a>
+                        <div class="account-box">
+                            <div class="account-box-headline">
+                                <a href="{% url "Acount:login" %}" class="login-ds">
+                                    <span class="title">ورود</span>
+                                    <span class="sub-title">به دیجی اسمارت</span>
+                                </a>
+                                <a href="register.html" class="register-ds active">
+                                    <span class="title">ثبت نام</span>
+                                    <span class="sub-title">در دیجی اسمارت</span>
+                                </a>
+
+                                {% if errors %}
+                                    {% for error in errors %}
+                                <div>
+                                    <span class="alert alert-danger register-ds active">{{ error }}</span>
+                                </div>
+                                    {% endfor %}
+                                {% endif %}
+
+                            </div>
+                            <div class="Login-to-account mt-4">
+                                <div class="account-box-content">
+                                    <h4>ثبت نام در دیجی اسمارت</h4>
+                                    <form action="#" class="form-account text-right" method="post">
+                                        {% csrf_token %}
+                                        <div class="form-account-title">
+                                            <label for="email-phone">نام کاربری</label>
+                                            <input type="text" class="number-email-input" id="email-phone" name="username">
+                                        </div>
+                                        <div class="form-account-title">
+                                            <label for="password">رمز عبور</label>
+                                            <input type="password" class="password-input" name="password1">
+                                        </div>
+
+                                        <div class="form-account-title">
+                                            <label for="password">تکرار رمز عبور</label>
+                                            <input type="password" class="password-input" name="password2">
+                                        </div>
+
+                                        <div class="form-auth-row">
+                                            <label for="#" class="ui-checkbox mt-1">
+                                                <input type="checkbox" value="1" name="login" id="remember">
+                                                <span class="ui-checkbox-check"></span>
+                                            </label>
+                                            <label for="remember" class="remember-me mr-0"><a href="#">حریم خصوصی</a> و <a href="#">شرایط قوانین </a>استفاده از سرویس های سایت دیجی‌اسمارت را مطالعه نموده و با کلیه موارد آن موافقم.</label>
+                                        </div>
+                                        <div class="form-row-account">
+                                            <button class="btn btn-primary btn-register" type="submit">ثبت نام در دیجی اسمارت</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+<!-- login----------------------------------->
+                   
+<!-- scroll_Progress------------------------->
+<div class="progress-wrap">
+    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
+    </svg>
+</div>
+<!-- scroll_Progress------------------------->
+
+</body>
+<!-- file js---------------------------------------------------->
+<script src="{% static "assets/js/vendor/jquery-3.2.1.min.js" %}"></script>
+<script src="{% static "assets/js/vendor/bootstrap.js" %}"></script>
+<!-- plugin----------------------------------------------------->
+<script src="{% static "assets/js/vendor/owl.carousel.min.js" %}"></script>
+<script src="{% static "assets/js/vendor/jquery.countdown.js" %}"></script>
+<script src="{% static "assets/js/vendor/ResizeSensor.min.js" %}"></script>
+<script src="{% static "assets/js/vendor/theia-sticky-sidebar.min.js" %}"></script>
+<script src="{% static "assets/js/vendor/wNumb.js" %}"></script>
+<script src="{% static "assets/js/vendor/nouislider.min.js" %}"></script>
+<!-- main js---------------------------------------------------->
+<script src="{% static "assets/js/main.js" %}"></script>
+</html>
