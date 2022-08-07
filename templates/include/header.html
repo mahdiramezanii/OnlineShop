@@ -107,9 +107,9 @@
                                     {% if request.user.is_authenticated %}
                                         <div class="nav-account d-block pl">
                                             <span class="icon-account">
-                                                <img src="{% static "assets/images/man.png" %}" class="avator">
+                                                <img src="{{ request.user.image.url }}" class="avator">
                                             </span>
-                                            {% if request.user.firstname %}
+                                            {% if request.user.first_name %}
                                                 <span class="title-account">{{ request.user.get_full_name}}</span>
                                                 {% else %}
                                                 <span class="title-account">{{ request.user.username }}</span>
