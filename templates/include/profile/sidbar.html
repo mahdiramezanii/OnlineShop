@@ -1,0 +1,53 @@
+{% load static %}
+<div class="sidebar-profile sidebar-navigation">
+                                <section class="profile-box">
+                                    <header class="profile-box-header-inline">
+                                        <div class="profile-avatar user-avatar profile-img">
+                                            <img src="{% static "assets/images/man.png" %}">
+                                        </div>
+                                    </header>
+                                    <footer class="profile-box-content-footer">
+                                        <span class="profile-box-nameuser">{{ request.user.username }}</span>
+                                        <span class="profile-box-registery-date">عضویت در سایت 2 پیش</span>
+                                        <span class="profile-box-phone">شماره همراه : *******0991</span>
+                                        <div class="profile-box-tabs">
+                                            <a href="{% url "Acount:logout" %}" class="profile-box-tab-sign-out"><i
+                                                    class="mdi mdi-logout-variant"></i>خروج از حساب</a>
+                                        </div>
+                                    </footer>
+                                </section>
+                                <section class="profile-box">
+                                    <ul class="profile-account-navs">
+                                        <li class="profile-account-nav-item navigation-link-dashboard">
+                                            <a href="{% url "Acount:profile" %}" class="{% if request.resolver_match.url_name == "profile" %}active{% endif %}"><i class="mdi mdi-account-outline"></i>
+                                                پروفایل
+                                            </a>
+                                        </li>
+                                        <li class="profile-account-nav-item navigation-link-dashboard">
+                                            <a href="{% url "Acount:profile_order" %}" class="{% if request.resolver_match.url_name == "profile_order" %}active{% endif %}"><i class="mdi mdi-cart"></i>
+                                                همه سفارش ها
+                                            </a>
+                                        </li>
+                                        <li class="profile-account-nav-item navigation-link-dashboard">
+                                            <a href="{% url "Acount:profile_favorate" %}" class="{% if request.resolver_match.url_name == "profile_favorate" %}active{% endif %}"><i class="mdi mdi-heart"></i>
+                                                لیست علاقه مندی
+                                            </a>
+                                        </li>
+                                        <li class="profile-account-nav-item navigation-link-dashboard">
+                                            <a href="{% url "Acount:profile_addres" %}" class="{% if request.resolver_match.url_name == "profile_addres" %}active{% endif %}"><i class="mdi mdi-map-outline"></i>
+                                                آدرس ها
+                                            </a>
+                                        </li>
+                                        <li class="profile-account-nav-item navigation-link-dashboard">
+                                            <a href="{% url "Acount:profile_comment" %}" class="{% if request.resolver_match.url_name == "profile_comment" %}active{% endif %}"><i class="mdi mdi-email-open-outline"></i>
+                                                نظرات
+                                            </a>
+                                        </li>
+                                        <li class="profile-account-nav-item navigation-link-dashboard">
+                                            <a href="{% url "Acount:profile_info" %}" class="{% if request.resolver_match.url_name == "profile_info" %}active{% endif %}"><i class="mdi mdi-tooltip-text-outline"></i>
+                                                اطلاعات حساب
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </section>
+                            </div>
