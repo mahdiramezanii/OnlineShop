@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'jalali_date',
     # my app
     'Home.apps.HomeConfig',
+    'Product.apps.ProductConfig',
     'Acount.apps.AcountConfig',
     'Blog.apps.BlogConfig',
 ]
